@@ -18,7 +18,7 @@ export function handlePostCreated(event: PostCreated): void {
 
   // Create a post entity
   const postId =
-    event.params.user.toHexString() + "::" + event.params.postIndex.toString();
+    event.params.user.toHexString() + "-" + event.params.postIndex.toString();
   const post = new Post(postId);
   post.isPaid = event.params.isPaid;
   post.attachments = event.params.attachments;
@@ -42,7 +42,7 @@ export function handleUserCreated(event: UserCreated): void {
 
 export function handleTransfer(event: Transfer): void {
   const astId =
-    event.address.toHexString() + "::" + event.params.tokenId.toString();
+    event.address.toHexString() + "-" + event.params.tokenId.toString();
 
   if (event.params.from === Address.zero()) {
     // Get the AST contract
