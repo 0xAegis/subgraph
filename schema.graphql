@@ -13,8 +13,8 @@ type User @entity {
   arcanaPublicKey: String!
   nftAddress: Bytes!
   posts: [Post!]! @derivedFrom(field: "author")
-  nftMinted: [AST!]! @derivedFrom(field: "user")
-  nftHolding: [AST!]! @derivedFrom(field: "holder")
+  nftsMinted: [AST!]! @derivedFrom(field: "user")
+  nftsHolding: [AST!]! @derivedFrom(field: "holder")
 }
 
 type AST @entity {
