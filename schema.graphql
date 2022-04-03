@@ -22,9 +22,4 @@ type Follow @entity {
   id: ID!
   follower: User!
   followed: User!
-  ast: AST!
-}
-
-type AST @entity {
-
 }
